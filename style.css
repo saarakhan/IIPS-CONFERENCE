@@ -22,7 +22,6 @@ body {
 /* Navigation Bar */
 nav {
     background-color: #010003;
-    padding: 10px 10px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -42,6 +41,8 @@ nav {
 
 .logo h2 {
     font-size: 1.5em;
+    padding-top: 5vh;
+    margin-left: 60px;
 }
 
 .nav-links ul {
@@ -50,7 +51,8 @@ nav {
 }
 
 .nav-links ul li {
-    margin-right: 20px;
+    margin-right: 60px;
+
 }
 
 .nav-links ul li a {
@@ -84,7 +86,7 @@ header {
     color: white;
     padding: 60px 0;
     text-align: center;
-    margin-top: 60px; /* Adjust for fixed nav */
+    margin-top: 60px; 
 }
 
 header h1 {
@@ -140,17 +142,35 @@ h2 {
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contact-info {
     display: flex;
     align-items: flex-start;
     margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.hover-info:hover {
+    background-color: #f0f0f0;
 }
 
 .contact-info i {
     margin-right: 1rem;
     color: #3498db;
+    transition: transform 0.3s ease;
+}
+
+.hover-info:hover i {
+    transform: scale(1.2);
 }
 
 .contact-info h3 {
@@ -165,11 +185,115 @@ h2 {
 a {
     color: #3498db;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-a:hover {
+.hover-link:hover {
+    color: #2980b9;
     text-decoration: underline;
 }
+
+/*Proposed themes section*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.content-section {
+    padding: 4rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    animation: fadeInDown 1s ease-out;
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.theme-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.theme-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-icon {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 48px;
+    height: 48px;
+    color: #3498db;
+    transition: transform 0.3s ease;
+}
+
+.theme-card:hover .theme-icon {
+    transform: scale(1.2);
+}
+
+.theme-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.theme-card p {
+    text-align: center;
+    color: #7f8c8d;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .themes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer Section */
 #footer {
     background-color: #1f2937;
