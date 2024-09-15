@@ -180,14 +180,19 @@ body, html {
     display: flex;
     gap: 60px;
     justify-content: space-between;
-    
+    animation: fadeInDown 1s ease-out ;
 }
 .hero-image-bg{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     border-radius: 80px;
     background-color: white;
     display: flex;
+}
+.hero-image-bg img{
+    position: relative;
+    margin: auto;
+    height: 130px;
 }
 
 .hero-content {
@@ -280,9 +285,7 @@ body {
 
 .content-section {
     padding: 4rem 0;
-    transform: translateY(64px);
 }
-
 .container {
     width: 90%;
     max-width: 1200px;
@@ -356,11 +359,11 @@ body {
 .davv-details h3 {
     color: #e74c3c;
     margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 30px;
 }
 
 .davv-details p {
-    color: #7f8c8d;
+    color: #454d4d;
     margin-bottom: 1rem;
 }
 
@@ -403,9 +406,6 @@ body {
     background-color: #f4f4f4;
 }
 
-.content-section {
-    padding: 4rem 0;
-}
 
 .container {
     width: 90%;
@@ -459,7 +459,7 @@ body {
 }
 
 .iips-card h3 {
-    font-size: 1.4rem;
+    font-size: 30px;
     margin-bottom: 1rem;
     color: #2c3e50;
 }
@@ -527,9 +527,6 @@ body {
     background-color: #f4f4f4;
 }
 
-.content-section {
-    padding: 4rem 0;
-}
 
 .container {
     width: 90%;
@@ -582,7 +579,7 @@ body {
 }
 
 .objective-card h3 {
-    font-size: 1.4rem;
+    font-size: 30px;
     margin-bottom: 1rem;
     color: #2c3e50;
 }
@@ -695,7 +692,7 @@ h2 {
 }
 
 .contact-info h3 {
-    font-size: 1.2rem;
+    font-size: 25px;
     margin: 0 0 0.5rem 0;
 }
 
@@ -722,10 +719,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-
-.content-section {
-    padding: 4rem 0;
 }
 
 .container {
@@ -820,6 +813,7 @@ body {
     background-color: #1f2937;
     color: white;
     padding: 2rem 0;
+    transform: translateY(64px);
 }
 
 .footer-content {
@@ -933,28 +927,4 @@ body {
         padding: 10px;
     }
 }
-
-/* Responsive Design
-@media (max-width: 768px) {
-    .nav-links ul {
-        flex-direction: column;
-        display: none;
-    }
-
-    .nav-links.show-nav ul {
-        display: block;
-    }
-
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    .container {
-        padding: 10px;
-    }
-} */
 
