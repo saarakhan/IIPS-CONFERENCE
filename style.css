@@ -81,24 +81,104 @@ nav {
 }
 
 /* Header Section */
-header {
-    background-color: #004d40;
-    color: white;
-    padding: 60px 0;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#hero {
+    background: linear-gradient(rgb(2, 57, 2), rgb(1, 41, 1)), url('https://via.placeholder.com/1920x1080.png?text=Conference+Background');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
     text-align: center;
-    margin-top: 60px; 
 }
 
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-bottom: 5px;
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-out;
 }
 
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.5s;
+    animation-fill-mode: both;
+}
+
+.hero-date {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 1s;
+    animation-fill-mode: both;
+}
+
+.hero-cta {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out 1.5s;
+    animation-fill-mode: both;
+}
+
+.hero-cta:hover {
+    background-color: #c0392b;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .hero-date {
+        font-size: 1rem;
+    }
+}
 /*About DAVV section*/
 body {
     font-family: Arial, sans-serif;
