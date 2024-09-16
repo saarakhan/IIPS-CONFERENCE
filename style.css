@@ -2,6 +2,11 @@
 /* General Styles */
 
 /* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -284,6 +289,64 @@ body, html {
     }
     .hero-date {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #davv-gate {
+        /* Adjust the image size for tablets and small screens */
+        height: 80vh; /* Reduce height for better fit on smaller screens */
+    }
+
+    #davv-logo,
+    #iips-logo {
+        width: 80px; /* Adjust width for mobile */
+    }
+
+    .hero-title {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-subtitle {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-date {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-cta {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 0.8rem; /* Adjust font size for button on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #davv-gate {
+        /* Further adjust the image size for very small screens */
+        height: 70vh; /* Reduce height further for very small screens */
+    }
+
+    #davv-logo,
+    #iips-logo {
+        width: 60px; /* Further adjust width for very small screens */
+    }
+
+    .hero-title {
+        font-size: 1.5rem; /* Adjust font size for very small screens */
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem; /* Adjust font size for very small screens */
+    }
+
+    .hero-date {
+        font-size: 0.8rem; /* Adjust font size for very small screens */
+    }
+
+    .hero-cta {
+        padding: 6px 12px; /* Further adjust button padding for very small screens */
+        font-size: 0.7rem; /* Adjust font size for button on very small screens */
     }
 }
 /*About DAVV section*/
