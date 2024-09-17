@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #f3f3f3;
     color: #333;
 }
@@ -55,13 +55,14 @@ nav {
     .logo h1 {
         font-size: 60px;
         margin: 0;
-        font-weight: 100;
+        font-weight: 900;
     }
     .logo h1 i{
-        font-weight: 600;
+        font-weight: 800;
     }
     .logo h1 span{
         font-size: 20px;
+        font-weight: 200;
     }
 }
 @media (max-width: 500px) {
@@ -96,6 +97,7 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 1em;
+    font-weight: 200;
     transition: color 0.3s, text-decoration 0.3s;
 }
 
@@ -161,12 +163,7 @@ nav {
 
 /* Header Section */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 #hero {
     position: relative;
@@ -181,6 +178,10 @@ body, html {
 
 .hero-container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
@@ -195,27 +196,32 @@ body, html {
     z-index: 1; /* Place it behind the logos and text */
     filter: brightness(50%) blur(5px);
 }
+.logo-section{
+    position: relative;
+    display:  flex;
+    justify-content: center;
 
+    height: auto;
+    gap: 80px;
+}
+.logo-container{
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 2;
+}
 #davv-logo,
 #iips-logo {
-    position: absolute;
+    width: 130px;
+    position: relative;
     z-index: 2; /* Place logos above the background image */
 }
 
-#davv-logo {
-    top: 10%; /* Adjust position as needed */
-    left: 35%;
-    width: 150px; /* Adjust width as needed */
-}
-
-#iips-logo {
-    top: 10%; /* Adjust position as needed */
-    right: 35%;
-    width: 150px; /* Adjust width as needed */
-}
-
 .hero-content {
-    margin-top: 230px;
     position: relative;
     z-index: 3; /* Place content above logos and background image */
     text-align: center;
@@ -224,8 +230,15 @@ body, html {
 }
 
 .hero-title {
-    font-size: 3rem; /* Adjust font size as needed */
+    font-size: 100px;
+    font-weight: 600; 
     margin: 0;
+    font-style: oblique 50deg;
+    text-shadow: 0 0 17px rgba(255,255,255,0.6);
+}
+.hero-title span{
+    font-size: 20px;
+    font-weight:200; 
 }
 
 .hero-subtitle {
@@ -280,18 +293,27 @@ body, html {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .hero-title {
-        font-size: 2rem;
-    }
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    .hero-date {
-        font-size: 1rem;
+        font-size: 60px;
     }
 }
 
+@media (max-width: 910px) {
+    .hero-title {
+        font-size: 40px;
+    }
+}
+@media (max-width: 660px) {
+    .hero-title {
+        font-size: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .hero-title {
+        font-size: 45px;
+    }
+}
 @media (max-width: 768px) {
     #davv-gate {
         /* Adjust the image size for tablets and small screens */
@@ -302,9 +324,12 @@ body, html {
     #iips-logo {
         width: 80px; /* Adjust width for mobile */
     }
-
-    .hero-title {
-        font-size: 2rem; /* Adjust font size for smaller screens */
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .hero-date {
+        font-size: 1rem;
     }
 
     .hero-subtitle {
@@ -332,9 +357,7 @@ body, html {
         width: 60px; /* Further adjust width for very small screens */
     }
 
-    .hero-title {
-        font-size: 1.5rem; /* Adjust font size for very small screens */
-    }
+    
 
     .hero-subtitle {
         font-size: 0.9rem; /* Adjust font size for very small screens */
@@ -351,7 +374,7 @@ body, html {
 }
 /*About DAVV section*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
@@ -474,7 +497,7 @@ body {
 
 /*About iips section*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
@@ -595,7 +618,7 @@ body {
 
 /*conference objectives section*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
@@ -695,7 +718,7 @@ body {
 
 /* Section Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
@@ -789,7 +812,7 @@ a {
 
 /*Proposed themes section*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
