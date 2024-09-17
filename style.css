@@ -194,7 +194,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1; /* Place it behind the logos and text */
-    filter: brightness(50%) blur(5px);
+    filter: brightness(35%) blur(5px);
 }
 .logo-section{
     position: relative;
@@ -205,18 +205,23 @@ nav {
     gap: 80px;
 }
 .logo-container{
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     z-index: 2;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease ;
+}
+.logo-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.5);
 }
 #davv-logo,
 #iips-logo {
-    width: 130px;
+    width: 90px;
     position: relative;
     z-index: 2; /* Place logos above the background image */
 }
@@ -241,6 +246,28 @@ nav {
     font-weight:200; 
 }
 
+@media (max-width: 1300px) {
+    .hero-title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 910px) {
+    .hero-title {
+        font-size: 40px;
+    }
+}
+@media (max-width: 660px) {
+    .hero-title {
+        font-size: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .hero-title {
+        font-size: 45px;
+    }
+}
+
 .hero-subtitle {
     font-size: 1.5rem; /* Adjust font size as needed */
     margin: 10px 0;
@@ -260,15 +287,12 @@ nav {
     border-radius: 5px;
     font-size: 1rem; /* Adjust font size as needed */
     margin-top: 20px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease ;
 }
 
 .hero-cta:hover {
-    background-color: #e67e22; /* Darker shade on hover */
-}
-
-
-.hero-cta:hover {
-    background-color: #c0392b;
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: 5px 5px 0px rgb(231, 76, 60,1);
 }
 
 @keyframes fadeInDown {
@@ -293,27 +317,6 @@ nav {
     }
 }
 
-@media (max-width: 1300px) {
-    .hero-title {
-        font-size: 60px;
-    }
-}
-
-@media (max-width: 910px) {
-    .hero-title {
-        font-size: 40px;
-    }
-}
-@media (max-width: 660px) {
-    .hero-title {
-        font-size: 30px;
-    }
-}
-@media (max-width: 500px) {
-    .hero-title {
-        font-size: 45px;
-    }
-}
 @media (max-width: 768px) {
     #davv-gate {
         /* Adjust the image size for tablets and small screens */
@@ -420,14 +423,14 @@ body {
 }
 
 .davv-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-15px) translateX(-15px);
+    box-shadow: 15px 15px 0px rgba(231, 77, 60, 1);
 }
 
 .davv-icon {
     width: 48px;
     height: 48px;
-    color: #e74c3c;
+    color: rgb(231, 77, 60);
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
 }
@@ -456,7 +459,7 @@ body {
 }
 
 .davv-details h3 {
-    color: #e74c3c;
+    color: rgb(231, 76, 60);
     margin-top: 1.5rem;
     font-size: 30px;
 }
@@ -541,8 +544,8 @@ body {
 }
 
 .iips-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-15px) translateX(-15px);
+    box-shadow: 15px 15px 0px rgba(231, 77, 60, 1);
 }
 
 .iips-icon {
@@ -661,8 +664,8 @@ body {
 }
 
 .objective-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-15px) translateX(-15px);
+    box-shadow: 15px 15px 0px rgba(231, 77, 60, 1);
 }
 
 .objective-icon {
@@ -763,8 +766,8 @@ h2 {
 }
 
 .hover-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-15px) translateX(-15px);
+    box-shadow: 15px 15px 0px rgba(231, 77, 60, 1);
 }
 
 .contact-info {
@@ -850,8 +853,8 @@ body {
 }
 
 .theme-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-15px) translateX(-15px);
+    box-shadow: 15px 15px 0px rgba(231, 77, 60, 1);
 }
 
 .theme-icon {
