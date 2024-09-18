@@ -37,6 +37,23 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* NAV-BAR Sticky */
+.nav-container.sticky {
+    background-color: #010003;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container.sticky .logo h1 {
+    font-size: 18px;
 }
 
 .logo h1 {
@@ -44,10 +61,12 @@ nav {
     margin: 0;
     font-weight: 100;
 }
-.logo h1 i{
+
+.logo h1 i {
     font-weight: 500;
 }
-.logo h1 span{
+
+.logo h1 span {
     font-size: 16px;
 }
 
@@ -57,24 +76,29 @@ nav {
         margin: 0;
         font-weight: 900;
     }
-    .logo h1 i{
+
+    .logo h1 i {
         font-weight: 800;
     }
-    .logo h1 span{
+
+    .logo h1 span {
         font-size: 20px;
         font-weight: 200;
     }
 }
+
 @media (max-width: 500px) {
     .logo h1 {
         font-size: 30px;
         margin: 0;
         font-weight: 100;
     }
-    .logo h1 i{
+
+    .logo h1 i {
         font-weight: 300;
     }
-    .logo h1 span{
+
+    .logo h1 span {
         font-size: 10px;
     }
 }
@@ -103,7 +127,8 @@ nav {
 
 .nav-links ul li a:hover {
     text-decoration: underline;
-    color: #f1c40f; /* Highlight color on hover */
+    color: #f1c40f;
+    /* Highlight color on hover */
 }
 
 /* Hamburger Menu Styles */
@@ -168,12 +193,15 @@ nav {
 #hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Hide overflow to avoid scrollbars */
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Hide overflow to avoid scrollbars */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000; /* Fallback color */
+    background: #000;
+    /* Fallback color */
 }
 
 .hero-container {
@@ -189,22 +217,26 @@ nav {
 #davv-gate {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image covers the container while maintaining aspect ratio */
+    object-fit: cover;
+    /* Ensure image covers the container while maintaining aspect ratio */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Place it behind the logos and text */
+    z-index: 1;
+    /* Place it behind the logos and text */
     filter: brightness(35%) blur(5px);
 }
-.logo-section{
+
+.logo-section {
     position: relative;
-    display:  flex;
+    display: flex;
     justify-content: center;
 
     height: auto;
     gap: 80px;
 }
-.logo-container{
+
+.logo-container {
     height: 120px;
     width: 120px;
     border-radius: 20px;
@@ -213,37 +245,43 @@ nav {
     align-items: center;
     background-color: white;
     z-index: 2;
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease ;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease;
 }
-.logo-container:hover{
+
+.logo-container:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.5);
 }
+
 #davv-logo,
 #iips-logo {
     width: 90px;
     position: relative;
-    z-index: 2; /* Place logos above the background image */
+    z-index: 2;
+    /* Place logos above the background image */
 }
 
 .hero-content {
     position: relative;
-    z-index: 3; /* Place content above logos and background image */
+    z-index: 3;
+    /* Place content above logos and background image */
     text-align: center;
-    color: #fff; /* White text color for contrast */
+    color: #fff;
+    /* White text color for contrast */
     padding: 20px;
 }
 
 .hero-title {
     font-size: 100px;
-    font-weight: 600; 
+    font-weight: 600;
     margin: 0;
     font-style: oblique 50deg;
-    text-shadow: 0 0 17px rgba(255,255,255,0.6);
+    text-shadow: 0 0 17px rgba(255, 255, 255, 0.6);
 }
-.hero-title span{
+
+.hero-title span {
     font-size: 20px;
-    font-weight:200; 
+    font-weight: 200;
 }
 
 @media (max-width: 1300px) {
@@ -257,11 +295,13 @@ nav {
         font-size: 40px;
     }
 }
+
 @media (max-width: 660px) {
     .hero-title {
         font-size: 30px;
     }
 }
+
 @media (max-width: 500px) {
     .hero-title {
         font-size: 45px;
@@ -269,30 +309,35 @@ nav {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem; /* Adjust font size as needed */
+    font-size: 1.5rem;
+    /* Adjust font size as needed */
     margin: 10px 0;
 }
 
 .hero-date {
-    font-size: 1.2rem; /* Adjust font size as needed */
+    font-size: 1.2rem;
+    /* Adjust font size as needed */
     margin: 10px 0;
 }
 
 .hero-cta {
     display: inline-block;
-    background-color: #f39c12; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #f39c12;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem; /* Adjust font size as needed */
+    font-size: 1rem;
+    /* Adjust font size as needed */
     margin-top: 20px;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease ;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
 }
 
 .hero-cta:hover {
     transform: translateX(-5px) translateY(-5px);
-    box-shadow: 5px 5px 0px rgb(231, 76, 60,1);
+    box-shadow: 5px 5px 0px rgb(231, 76, 60, 1);
 }
 
 @keyframes fadeInDown {
@@ -300,6 +345,7 @@ nav {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -311,6 +357,7 @@ nav {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -320,61 +367,75 @@ nav {
 @media (max-width: 768px) {
     #davv-gate {
         /* Adjust the image size for tablets and small screens */
-        height: 80vh; /* Reduce height for better fit on smaller screens */
+        height: 80vh;
+        /* Reduce height for better fit on smaller screens */
     }
 
     #davv-logo,
     #iips-logo {
-        width: 80px; /* Adjust width for mobile */
+        width: 80px;
+        /* Adjust width for mobile */
     }
-    
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
+
     .hero-date {
         font-size: 1rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        font-size: 1rem;
+        /* Adjust font size for smaller screens */
     }
 
     .hero-date {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        font-size: 0.9rem;
+        /* Adjust font size for smaller screens */
     }
 
     .hero-cta {
-        padding: 8px 16px; /* Adjust button padding for smaller screens */
-        font-size: 0.8rem; /* Adjust font size for button on smaller screens */
+        padding: 8px 16px;
+        /* Adjust button padding for smaller screens */
+        font-size: 0.8rem;
+        /* Adjust font size for button on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     #davv-gate {
         /* Further adjust the image size for very small screens */
-        height: 70vh; /* Reduce height further for very small screens */
+        height: 70vh;
+        /* Reduce height further for very small screens */
     }
 
     #davv-logo,
     #iips-logo {
-        width: 60px; /* Further adjust width for very small screens */
+        width: 60px;
+        /* Further adjust width for very small screens */
     }
 
-    
+
 
     .hero-subtitle {
-        font-size: 0.9rem; /* Adjust font size for very small screens */
+        font-size: 0.9rem;
+        /* Adjust font size for very small screens */
     }
 
     .hero-date {
-        font-size: 0.8rem; /* Adjust font size for very small screens */
+        font-size: 0.8rem;
+        /* Adjust font size for very small screens */
     }
 
     .hero-cta {
-        padding: 6px 12px; /* Further adjust button padding for very small screens */
-        font-size: 0.7rem; /* Adjust font size for button on very small screens */
+        padding: 6px 12px;
+        /* Further adjust button padding for very small screens */
+        font-size: 0.7rem;
+        /* Adjust font size for button on very small screens */
     }
 }
+
 /*About DAVV section*/
 body {
     font-family: "Montserrat", sans-serif;
@@ -388,6 +449,7 @@ body {
 .content-section {
     padding: 4rem 0;
 }
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -474,6 +536,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -485,6 +548,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -595,6 +659,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -606,6 +671,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -696,6 +762,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -707,6 +774,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -887,6 +955,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -898,6 +967,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1086,4 +1156,3 @@ body {
         padding: 10px;
     }
 }
-
