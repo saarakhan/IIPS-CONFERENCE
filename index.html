@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAVV - International Conference 2025</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -172,38 +172,38 @@
 
     <!-- Conference Objectives Section -->
     <div class="outer-white-div">
-    <section id="objectives" class="custom-content-section">
-        <div class="container">
-            <h2 class="custom-section-title">Conference Objectives</h2>
-            <div class="custom-objectives-accordion">
-                <div class="custom-accordion-item">
-                    <h3 class="accordion-header">Interdisciplinary Dialogue</h3>
-                    <div class="custom-accordion-content">
-                        <p>Facilitate interdisciplinary dialogue on SDG implementation strategies.</p>
+        <section id="objectives" class="custom-content-section">
+            <div class="container">
+                <h2 class="custom-section-title">Conference Objectives</h2>
+                <div class="custom-objectives-accordion">
+                    <div class="custom-accordion-item">
+                        <h3 class="accordion-header">Interdisciplinary Dialogue</h3>
+                        <div class="custom-accordion-content">
+                            <p>Facilitate interdisciplinary dialogue on SDG implementation strategies.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="custom-accordion-item">
-                    <h3 class="accordion-header">Showcase Success</h3>
-                    <div class="custom-accordion-content">
-                        <p>Showcase successful multidisciplinary approaches to SDG challenges.</p>
+                    <div class="custom-accordion-item">
+                        <h3 class="accordion-header">Showcase Success</h3>
+                        <div class="custom-accordion-content">
+                            <p>Showcase successful multidisciplinary approaches to SDG challenges.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="custom-accordion-item">
-                    <h3 class="accordion-header">Cross-sector Collaboration</h3>
-                    <div class="custom-accordion-content">
-                        <p>Identify opportunities for cross-sector collaboration and innovation.</p>
+                    <div class="custom-accordion-item">
+                        <h3 class="accordion-header">Cross-sector Collaboration</h3>
+                        <div class="custom-accordion-content">
+                            <p>Identify opportunities for cross-sector collaboration and innovation.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="custom-accordion-item">
-                    <h3 class="accordion-header">Explore Solutions</h3>
-                    <div class="custom-accordion-content">
-                        <p>Explore viable solutions and share best practices for sustainable societies.</p>
+                    <div class="custom-accordion-item">
+                        <h3 class="accordion-header">Explore Solutions</h3>
+                        <div class="custom-accordion-content">
+                            <p>Explore viable solutions and share best practices for sustainable societies.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
 
 
@@ -457,71 +457,7 @@
         </footer>
 
         <!-- JavaScript for Animations and Responsive Navbar -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Intersection Observer for animations
-                const sections = document.querySelectorAll('.content-section');
-                const options = { threshold: 0.1 };
-                const observer = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('show');
-                        }
-                    });
-                }, options);
-
-                sections.forEach(section => {
-                    observer.observe(section);
-                });
-
-                // LOGO LINKS
-                document.getElementById('DAVV_LINK_LOGO').addEventListener('click', () => {
-                    window.open('https://www.dauniv.ac.in/', '_blank');
-                });
-                document.getElementById('IIPS_LINK_LOGO').addEventListener('click', () => {
-                    window.open('https://iips.edu.in/', '_blank');
-                });
-
-
-                // Responsive Navbar
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('navLinks');
-
-                hamburger.addEventListener('click', () => {
-                    navLinks.classList.toggle('show-nav');
-                });
-            });
-
-            document.addEventListener('DOMContentLoaded', function () {
-                const titles = document.querySelectorAll('.committee-title');
-
-                titles.forEach(title => {
-                    title.addEventListener('click', function () {
-                        const targetId = this.getAttribute('data-target');
-                        const content = document.getElementById(targetId);
-                        const isVisible = content.style.display === 'block';
-
-                        // Toggle content visibility
-                        content.style.display = isVisible ? 'none' : 'block';
-                        this.querySelector('.toggle-icon').textContent = isVisible ? '+' : '−';
-                    });
-                });
-            });
-
-            // Sticky Nav
-            window.onscroll = function () { stickyNavbar() };
-
-            var navbar = document.querySelector(".nav-container");
-            var sticky = navbar.offsetTop;
-
-            function stickyNavbar() {
-                if (window.pageYOffset > sticky) {
-                    navbar.classList.add("sticky");
-                } else {
-                    navbar.classList.remove("sticky");
-                }
-            }
-
+        <script src="script.js">
         </script>
 </body>
 
